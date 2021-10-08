@@ -1,7 +1,7 @@
 body {
     margin: 0;
 }
-a.stop {
+/* a.stop {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -24,7 +24,7 @@ a.stop {
 a.stop.active {
     background-color: red;
     color: #fff;
-}
+} */
 #egg-loop {
     position: relative;
     display: flex;
@@ -46,9 +46,9 @@ a.stop.active {
     height: 100%;
     transform: rotate(45deg);
 }
-#egg-loop.paused .loop-item {
+/* #egg-loop.paused .loop-item {
     animation-play-state: paused !important;
-}
+} */
 .loop-item:first-child {
     /* background: #D98880; */
     -webkit-animation: shapegrow 20s infinite; /* Chrome, Safari, Opera */
@@ -190,27 +190,31 @@ a.stop.active {
 
 @keyframes shapegrow {
     0%   {
+        display: block;
+        visibility: visible;
         height: 0%;
         width: 0%;
-        opacity: 1;
         z-index: 100;
     }
-    50%   {
-        height: 500%;
-        width: 500%;
-        opacity: 1;
+    10%   {
+        display: block;
+        visibility: visible;
+        height: 400%;
+        width: 400%;
         z-index: 0;
     }
-    51%   {
+    11%   {
+        display: none;
+        visibility: hidden;
         height: 0%;
         width: 0%;
-        opacity: 0;
         z-index: 0;
     }
     100%   {
+        display: none;
+        visibility: hidden;
         height: 0%;
         width: 0%;
-        opacity: 0;
         z-index: 0;
     }
 }
